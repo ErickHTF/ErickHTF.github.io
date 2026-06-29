@@ -83,6 +83,10 @@
   object-fit: contain;
 }
 
+.logo-hover { display: none; }
+.feature:hover .logo-default { display: none; }
+.feature:hover .logo-hover { display: block; }
+
 .feature-blurb {
   font-family: var(--font-body);
   font-size: var(--type-feature-blurb);

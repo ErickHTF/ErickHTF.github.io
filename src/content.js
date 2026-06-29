@@ -10,6 +10,16 @@ import jenkins from "./assets/images/jenkins.png";
 import docker from "./assets/images/docker.png";
 import jira from "./assets/images/jira.png";
 import github from "./assets/images/github.png";
+import javaW from "./assets/images/java-white.png";
+import springBootW from "./assets/images/spring-boot-white.png";
+import awsW from "./assets/images/aws-white.png";
+import cloudW from "./assets/images/cloud-white.png";
+import postgresqlW from "./assets/images/postgresql-white.png";
+import databaseW from "./assets/images/database-white.png";
+import jenkinsW from "./assets/images/jenkins-white.png";
+import dockerW from "./assets/images/docker-white.png";
+import jiraW from "./assets/images/jira-white.png";
+import githubW from "./assets/images/github-white.png";
 
 export const content = {
   name: "Erick Henrique",
@@ -63,15 +73,15 @@ export const content = {
   ],
 
   features: [
-    { tag: "#1 Java",    title: "Java & Spring Boot",    logos: [java, springBoot],
+    { tag: "#1 Java",    title: "Java & Spring Boot",    logos: [java, springBoot],       logosHover: [javaW, springBootW],
       blurb: "Building and maintaining production Spring Boot services: REST APIs, AWS SDK integration, and service lifecycle management." },
-    { tag: "#2 AWS",     title: "Cloud & AWS",           logos: [aws, cloud],
+    { tag: "#2 AWS",     title: "Cloud & AWS",           logos: [aws, cloud],             logosHover: [awsW, cloudW],
       blurb: "Lambda, EC2, and S3 integrated with Java services in a live banking environment. Infrastructure that needs to stay up." },
-    { tag: "#3 SQL",     title: "SQL & Databases",       logos: [postgresql, database],
+    { tag: "#3 SQL",     title: "SQL & Databases",       logos: [postgresql, database],   logosHover: [postgresqlW, databaseW],
       blurb: "Writing and optimizing queries in PostgreSQL and MySQL. Schema analysis, slow query troubleshooting, and operational data support." },
-    { tag: "#4 CI/CD",   title: "DevOps & CI/CD",        logos: [jenkins, docker],
+    { tag: "#4 CI/CD",   title: "DevOps & CI/CD",        logos: [jenkins, docker],        logosHover: [jenkinsW, dockerW],
       blurb: "Pipelines with Jenkins and GitHub Actions. Docker containerization for consistent environments across staging and production." },
-    { tag: "#5 Agile",   title: "Agile Delivery",        logos: [jira, github],
+    { tag: "#5 Agile",   title: "Agile Delivery",        logos: [jira, github],           logosHover: [jiraW, githubW],
       blurb: "Scrum and Kanban in a technical team. Incremental delivery with a focus on clear communication and not breaking what's already running." },
     { tag: "#6 Systems", title: "Core Banking Systems",
       blurb: "Distributed, fault-tolerant services in a financial domain. High availability and auditability are non-negotiable." },

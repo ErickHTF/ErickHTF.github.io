@@ -9,7 +9,10 @@ function FeatureCard({ f }) {
       {f.logos && (
         <div className="feature-logos">
           {f.logos.map((src, i) => (
-            <img key={i} src={src} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            <img key={i} src={src} alt="" aria-hidden="true" loading="lazy" decoding="async" className="logo-default" />
+          ))}
+          {f.logosHover && f.logosHover.map((src, i) => (
+            <img key={i} src={src} alt="" aria-hidden="true" loading="lazy" decoding="async" className="logo-hover" />
           ))}
         </div>
       )}
