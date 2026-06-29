@@ -1,0 +1,46 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--layout-main-padding-x) var(--layout-main-padding-bottom);
+  position: relative;
+  z-index: 1;
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+html[data-mode="tech"]   .only-simple { display: none; }
+html[data-mode="simple"] .only-tech   { display: none; }
+
+footer {
+  font-family: var(--font-mono);
+  font-size: var(--type-footer);
+  color: var(--muted);
+  margin-top: var(--layout-footer-margin-top);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}

@@ -1,0 +1,28 @@
+.college-repo-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--type-section-badge);
+  letter-spacing: var(--tracking-base);
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.college-repo-link:hover {
+  opacity: 0.65;
+}
+
+@media (min-width: 860px) {
+  section[aria-labelledby="college-heading"] .project-img {
+    aspect-ratio: 16 / 7;
+    align-self: start;
+  }
+  section[aria-labelledby="college-heading"] .project:not(:first-of-type) .project-img {
+    aspect-ratio: 4 / 3;
+  }
+}

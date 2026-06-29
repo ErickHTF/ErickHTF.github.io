@@ -1,0 +1,114 @@
+.hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--layout-hero-padding-top) var(--layout-hero-padding-x) var(--layout-hero-padding-bottom);
+  background: var(--accent);
+  overflow: hidden;
+}
+
+.hero__siderays {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__text {
+  position: relative;
+  z-index: 2;
+  max-width: var(--hero-text-max-width);
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--type-section-label);
+  letter-spacing: var(--tracking-ultra);
+  text-transform: uppercase;
+  color: var(--text-on-accent-muted);
+  margin-bottom: var(--space-5);
+}
+
+.hero__eyebrow--encrypted {
+  opacity: 0.35;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--display-size);
+  font-weight: 300;
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  line-height: 0.92;
+  color: var(--text-on-accent);
+  margin-bottom: var(--space-6);
+}
+
+.hero__intro {
+  font-family: var(--font-body);
+  font-size: var(--type-hero-intro);
+  color: var(--text-on-accent-soft);
+  max-width: var(--hero-intro-max-width);
+  margin: 0 auto;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.hero__figure {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, black 18%),
+    radial-gradient(ellipse 72% 72% at 50% 52%, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.28) 50%, black 82%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, black 18%),
+    radial-gradient(ellipse 72% 72% at 50% 52%, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.28) 50%, black 82%);
+  mask-composite: intersect;
+}
+
+.hero__figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.hero__figure .rays {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@keyframes ray-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes ray-wave-a {
+  0%, 100% { opacity: 0.20; }
+  50%      { opacity: 0.75; }
+}
+
+@keyframes ray-wave-b {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__figure .rays__group { animation: none; }
+}
